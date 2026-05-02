@@ -181,7 +181,7 @@
         .logo {
             font-family: var(--font-logo);
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 00;
             color: var(--text-white);
             letter-spacing: 3px;
         }
@@ -250,7 +250,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('robothand.png') no-repeat center center/cover;
+            background: url('assets/images/robot_hand_bg_1777097039295.png') no-repeat center center/cover;
             opacity: 0.4;
             z-index: -1;
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
@@ -285,6 +285,7 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* ---------------- SECTION 3: About ---------------- */
@@ -404,7 +405,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
         }
 
@@ -848,6 +849,26 @@
         }
 
         @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .about, .team, .projects, .hackathons, .progress-section, .contact {
+                padding: 60px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+
             .nav-links {
                 display: none;
                 position: absolute;
